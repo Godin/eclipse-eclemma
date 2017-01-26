@@ -2,6 +2,13 @@
 
 set -euo pipefail
 
+if [ "$TRAVIS_OS_NAME" == "osx" ]; then
+  mvn -V -B -e \
+    verify -DskipUITests=false
+fi
+
+exit 0
+
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sleep 5

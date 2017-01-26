@@ -1,5 +1,5 @@
 language: java
-jdk: oraclejdk8
+#jdk: oraclejdk8
 
 # Skip "install" stage:
 install: true
@@ -12,12 +12,14 @@ addons:
     packages:
     - metacity
 
-env:
-  - PLATFORM=e3.8
-    JDK=1.7
-  - PLATFORM=e4.6
-    JDK=1.8
-  - PLATFORM=e4.7
-    JDK=1.8
+os: osx
+
+#env:
+#  - PLATFORM=e3.8
+#    JDK=1.7
+#  - PLATFORM=e4.6
+#    JDK=1.8
+#  - PLATFORM=e4.7
+#    JDK=1.8
 
 script: bash .travis.sh

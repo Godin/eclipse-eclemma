@@ -43,6 +43,7 @@ import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -94,10 +95,13 @@ public class SessionImportPage1 extends WizardPage {
 
   public void createControl(Composite parent) {
     initializeDialogUnits(parent);
+    Font font = parent.getFont();
     parent = new Composite(parent, SWT.NONE);
+    parent.setFont(font);
     GridLayout layout = new GridLayout(1, false);
     parent.setLayout(layout);
     Composite sourceGroup = new Composite(parent, SWT.NONE);
+    sourceGroup.setFont(font);
     GridDataFactory.swtDefaults().grab(true, false)
         .align(SWT.FILL, SWT.BEGINNING).applyTo(sourceGroup);
     GridLayoutFactory.swtDefaults().numColumns(5).applyTo(sourceGroup);
@@ -123,6 +127,7 @@ public class SessionImportPage1 extends WizardPage {
       }
     });
     filecombo = new Combo(parent, SWT.BORDER);
+    filecombo.setFont(parent.getFont());
     filecombo.addModifyListener(new ModifyListener() {
       public void modifyText(ModifyEvent e) {
         updateStatus();
@@ -156,6 +161,7 @@ public class SessionImportPage1 extends WizardPage {
       }
     });
     urlcombo = new Combo(parent, SWT.BORDER);
+    urlcombo.setFont(parent.getFont());
     urlcombo.addModifyListener(new ModifyListener() {
       public void modifyText(ModifyEvent e) {
         updateStatus();

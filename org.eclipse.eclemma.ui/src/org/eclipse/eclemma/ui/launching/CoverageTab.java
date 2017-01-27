@@ -23,6 +23,7 @@ import org.eclipse.jface.viewers.SelectionChangedEvent;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.graphics.Image;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
@@ -48,7 +49,9 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
   }
 
   public void createControl(Composite parent) {
+    Font font = parent.getFont();
     parent = new Composite(parent, SWT.NONE);
+    parent.setFont(font);
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_LAUNCH_TAB);
     GridLayout layout = new GridLayout();
     layout.verticalSpacing = 0;
@@ -60,6 +63,7 @@ public class CoverageTab extends AbstractLaunchConfigurationTab {
 
   private void createAnalysisScope(Composite parent) {
     Group group = new Group(parent, SWT.NONE);
+    group.setFont(parent.getFont());
     group.setLayoutData(new GridData(GridData.FILL_BOTH));
     group.setText(UIMessages.CoverageTabAnalysisScopeGroup_label);
     GridLayout layout = new GridLayout();

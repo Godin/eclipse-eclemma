@@ -52,6 +52,7 @@ public class CoveragePreferencePage extends FieldEditorPreferencePage
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_PREFERENCES);
 
     final Composite result = new Composite(parent, SWT.NONE);
+    result.setFont(parent.getFont());
     GridLayoutFactory.swtDefaults().margins(0, 0).applyTo(result);
 
     createSessionManagementGroup(result);

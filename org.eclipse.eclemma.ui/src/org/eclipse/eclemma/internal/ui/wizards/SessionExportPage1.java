@@ -30,6 +30,7 @@ import org.eclipse.swt.events.ModifyEvent;
 import org.eclipse.swt.events.ModifyListener;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Button;
@@ -72,7 +73,9 @@ public class SessionExportPage1 extends WizardPage {
 
   public void createControl(Composite parent) {
     initializeDialogUnits(parent);
+    Font font = parent.getFont();
     parent = new Composite(parent, SWT.NONE);
+    parent.setFont(font);
     parent.setLayout(new GridLayout());
     new Label(parent, SWT.NONE)
         .setText(UIMessages.ExportSessionPage1Sessions_label);
@@ -89,6 +92,7 @@ public class SessionExportPage1 extends WizardPage {
     gd.heightHint = convertHeightInCharsToPixels(8);
     sessionstable.getControl().setLayoutData(gd);
     Group group = new Group(parent, SWT.NONE);
+    group.setFont(font);
     group.setText(UIMessages.ExportSessionPage1DestinationGroup_label);
     group.setLayoutData(new GridData(GridData.FILL_HORIZONTAL));
     createExportOptionsGroup(group);
@@ -103,6 +107,7 @@ public class SessionExportPage1 extends WizardPage {
     new Label(parent, SWT.NONE)
         .setText(UIMessages.ExportSessionPage1Format_label);
     formatcombo = new ComboViewer(parent, SWT.READ_ONLY);
+    formatcombo.getCombo().setFont(parent.getFont());
     formatcombo.setContentProvider(new ArrayContentProvider());
     formatcombo.setLabelProvider(new LabelProvider() {
       @Override
@@ -128,6 +133,7 @@ public class SessionExportPage1 extends WizardPage {
     new Label(parent, SWT.NONE)
         .setText(UIMessages.ExportSessionPage1Destination_label);
     destinationcombo = new Combo(parent, SWT.BORDER);
+    destinationcombo.setFont(parent.getFont());
     destinationcombo.addModifyListener(new ModifyListener() {
       public void modifyText(ModifyEvent e) {
         update();

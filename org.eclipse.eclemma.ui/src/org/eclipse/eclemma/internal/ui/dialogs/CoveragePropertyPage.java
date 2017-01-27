@@ -24,6 +24,7 @@ import org.eclipse.jface.viewers.Viewer;
 import org.eclipse.jface.viewers.ViewerCell;
 import org.eclipse.jface.viewers.ViewerFilter;
 import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Font;
 import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
 import org.eclipse.swt.widgets.Composite;
@@ -56,7 +57,9 @@ public class CoveragePropertyPage extends PropertyPage {
   protected Control createContents(Composite parent) {
     ContextHelp.setHelp(parent, ContextHelp.COVERAGE_PROPERTIES);
     noDefaultAndApplyButton();
+    Font font = parent.getFont();
     parent = new Composite(parent, SWT.NONE);
+    parent.setFont(font);
     GridLayout layout = new GridLayout();
     layout.numColumns = 2;
     layout.marginWidth = 0;
@@ -64,10 +67,12 @@ public class CoveragePropertyPage extends PropertyPage {
     parent.setLayout(layout);
 
     Label l1 = new Label(parent, SWT.NONE);
+    l1.setFont(font);
     l1.setText(UIMessages.CoveragePropertyPageSession_label);
     l1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, false, false));
 
     Text t1 = new Text(parent, SWT.READ_ONLY | SWT.WRAP);
+    t1.setFont(font);
     t1.setText(getSessionDescription());
     t1.setLayoutData(new GridData(SWT.LEFT, SWT.TOP, true, false));
     t1.setBackground(t1.getDisplay()

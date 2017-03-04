@@ -164,7 +164,7 @@
         <configuration>
           <sessionId>${project.artifactId}</sessionId>
           <includes>
-            <include>org.eclipse.eclemma.*</include>
+            <include>org/eclipse/eclemma/**</include>
           </includes>
         </configuration>
         <executions>

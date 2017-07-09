@@ -18,6 +18,7 @@ import java.util.Set;
 
 import org.eclipse.jdt.core.IPackageFragmentRoot;
 import org.eclipse.jdt.core.JavaModelException;
+import org.eclipse.jface.dialogs.Dialog;
 import org.eclipse.jface.dialogs.IDialogSettings;
 import org.eclipse.jface.viewers.ISelectionChangedListener;
 import org.eclipse.jface.viewers.SelectionChangedEvent;
@@ -74,6 +75,7 @@ public class SessionImportPage2 extends WizardPage {
     ContextHelp.setHelp(parent, ContextHelp.SESSION_IMPORT);
     restoreWidgetValues();
     update();
+    Dialog.applyDialogFont(parent);
   }
 
   private void createNameBlock(Composite parent) {

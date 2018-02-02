@@ -752,6 +752,7 @@
             id="org.eclipse.eclemma.ui.contextualLaunch.coverage">
          <action
                label="%CoverageContextMenu.label"
+               icon="$nl$/icons/full/elcl16/runcoverage.png"
                style="pulldown"
                class="org.eclipse.eclemma.internal.ui.actions.CoverageContextualLaunchAction"
                menubarPath="additions"

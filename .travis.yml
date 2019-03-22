@@ -12,20 +12,24 @@ addons:
     packages:
     - metacity
 
-env:
-  - PLATFORM=e3.8
-    JDK=1.7
-  - PLATFORM=e4.6
-    JDK=1.8
-  - PLATFORM=e4.7
-    JDK=1.8
-  - PLATFORM=e4.8
-    JDK=1.8
-  - PLATFORM=e4.9
-    JDK=1.8
-  - PLATFORM=e4.10
-    JDK=1.8
-  - PLATFORM=e4.11
-    JDK=1.8
+matrix:
+  include:
+#  - PLATFORM=e3.8
+#    JDK=1.7
+#  - PLATFORM=e4.6
+#    JDK=1.8
+#  - PLATFORM=e4.7
+#    JDK=1.8
+#  - PLATFORM=e4.8
+#    JDK=1.8
+#  - PLATFORM=e4.9
+#    JDK=1.8
+#  - PLATFORM=e4.10
+#    JDK=1.8
+#  - PLATFORM=e4.11
+#    JDK=1.8
+  - env: PLATFORM=e4.10
+    env: JDK=11
+    jdk: oraclejdk11
 
 script: bash .travis.sh

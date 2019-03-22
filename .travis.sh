@@ -2,6 +2,9 @@
 
 set -euo pipefail
 
+ls -lA /usr/lib/jvm/
+ls -lA /usr/local/lib/jvm/
+
 export DISPLAY=:99.0
 sh -e /etc/init.d/xvfb start
 sleep 5

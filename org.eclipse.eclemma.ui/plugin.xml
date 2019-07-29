@@ -1066,4 +1066,21 @@
          </themeid>
       </stylesheet>
    </extension>
+
+   <extension point="org.eclipse.ui.workbench.texteditor.rulerColumns">
+      <column
+            class="org.eclipse.eclemma.internal.ui.MyRulerColumn"
+            enabled="true"
+            global="true"
+            id="org.eclipse.eclemma.ui.column1"
+            includeInMenu="true"
+            name="MyRulerColumn">
+         <placement
+               gravity="1.0">
+         </placement>
+         <targetClass
+               class="org.eclipse.ui.texteditor.AbstractDecoratedTextEditor">
+         </targetClass>
+      </column>
+   </extension>
 </plugin>

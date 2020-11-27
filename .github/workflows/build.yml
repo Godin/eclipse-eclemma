@@ -3,20 +3,21 @@ name: CI
 on:
   push:
     branches:
-      - github-actions
+      - github-actions-sonarcloud
 
 jobs:
   build:
     runs-on: ubuntu-18.04
     strategy:
       matrix:
-        eclipse: [4.6, 4.7, 4.8, 4.9, 4.10, 4.11, 4.12, 4.13]
+        eclipse: [4.11]
     name: 'Eclipse ${{ matrix.eclipse }}'
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-java@v1
         with:
-          java-version: 8
+          # SonarCloud requires Java 11 for new projects
+          java-version: 11
       - run: |
           sudo apt-get update
           sudo apt-get install metacity
@@ -24,6 +25,9 @@ jobs:
           Xvfb :99 &
           sleep 5
           metacity --sm-disable --replace 2> metacity.err &
-          mvn -V -B -e verify -P e${{ matrix.eclipse }} -DskipUITests=false
+          mvn -V -B -e verify -P e${{ matrix.eclipse }} -DskipUITests=false sonar:sonar -Dsonar.host.url=https://sonarcloud.io -Dsonar.organization=godin-github -Dsonar.projectKey=godin:eclemma
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
       - run: cat org.eclipse.eclemma.ui.test/target/work/data/.metadata/.log
         if: ${{ failure() }}

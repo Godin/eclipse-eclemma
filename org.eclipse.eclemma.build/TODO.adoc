@@ -1,0 +1,14 @@
+https://www.eclipse.org/lists/cross-project-issues-dev/msg19359.html
+
+> 2.7.5 to ensure that PGP signatures and keys are propagated from the originating repository to your target repository
+
+
+https://wiki.eclipse.org/Tycho/Release_Notes/2.0#Unlink_compiler_levels_from_execution_environemnt
+
+> The compilation levels are derived from explicit sources like Bundle-RequiredExecutionEnvironment or related settings in build.properties or pom.xml, and are not affected any more by the execution environment that is used to resolve dependencies. So you can set executionEnvironment to JavaSE-11, have a bundle with BREE=JavaSE-1.8, and Java 1.8 will be used as compile source/target level without extra configuration.
+
+
+https://wiki.eclipse.org/Tycho/Release_Notes/2.0#Requires_Java_11
+
+
+mvn clean verify -Dtycho.version=2.7.5 -Pe4.12 -Dtycho.executionEnvironment=JavaSE-11

@@ -76,6 +76,7 @@
 
     <jacoco.version>0.8.8</jacoco.version>
     <tycho.testArgLine>-Xmx800m</tycho.testArgLine>
+    <tycho.executionEnvironment></tycho.executionEnvironment>
 
     <!-- SonarQube -->
     <sonar.java.source>1.5</sonar.java.source>
@@ -407,6 +408,7 @@
                 </artifact>
               </target>
               <ignoreTychoRepositories>true</ignoreTychoRepositories>
+              <executionEnvironment>${tycho.executionEnvironment}</executionEnvironment>
               <environments>
                 <environment>
                   <os>win32</os>

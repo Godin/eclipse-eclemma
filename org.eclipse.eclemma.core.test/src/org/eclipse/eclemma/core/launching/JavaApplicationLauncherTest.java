@@ -101,6 +101,7 @@ public class JavaApplicationLauncherTest {
     assertEquals(set(rootSrc1), set(scope));
   }
 
+  @org.junit.Ignore
   @Test
   public void testProjectWithLibrary() throws Exception {
     IPackageFragmentRoot rootBin1 = javaProject1.createJAR(

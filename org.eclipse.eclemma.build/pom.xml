@@ -408,6 +408,13 @@
         </property>
       </activation>
       <properties>
+        <!--
+            According to https://wiki.eclipse.org/Eclipse/Installation
+            requires Java 7 starting from 4.4
+            requires Java 8 starting from 4.6
+            requires Java 11 starting from 4.17
+            requires Java 17 starting from 4.25
+        -->
         <target-platform>eclemma-e4.28</target-platform>
         <platform-repository-url>http://download.eclipse.org/releases/2023-06/</platform-repository-url>
       </properties>

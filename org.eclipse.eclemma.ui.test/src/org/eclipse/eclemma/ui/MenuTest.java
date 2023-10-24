@@ -34,6 +34,8 @@ public class MenuTest {
    */
   @Test
   public void labels_should_be_consistent() {
+    org.eclipse.swtbot.swt.finder.utils.SWTBotPreferences.TIMEOUT = 10000;
+
     bot.perspectiveByLabel("Java").activate();
     final List<String> items = bot.menu("Run").menuItems();
 

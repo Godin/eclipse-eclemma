@@ -17,7 +17,6 @@ import org.eclipse.swtbot.swt.finder.widgets.SWTBotTreeItem;
 import org.junit.After;
 import org.junit.Test;
 
-@org.junit.Ignore
 public class ExportImportTest {
 
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();

@@ -21,7 +21,6 @@ import org.eclipse.ui.PlatformUI;
 import org.junit.After;
 import org.junit.Test;
 
-@org.junit.Ignore
 public class CoverageViewTest {
 
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();

@@ -34,6 +34,9 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-surefire-plugin</artifactId>
         <configuration>
+          <systemProperties>
+            <org.eclipse.swtbot.search.timeout>30000</org.eclipse.swtbot.search.timeout>
+          </systemProperties>
           <useUIHarness>true</useUIHarness>
           <useUIThread>false</useUIThread>
           <skipExec>${skipUITests}</skipExec>

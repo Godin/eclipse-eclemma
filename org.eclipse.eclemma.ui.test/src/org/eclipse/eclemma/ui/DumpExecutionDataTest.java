@@ -33,7 +33,6 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-@org.junit.Ignore
 public class DumpExecutionDataTest {
 
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();

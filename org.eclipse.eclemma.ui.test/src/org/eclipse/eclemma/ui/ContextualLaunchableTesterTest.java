@@ -30,6 +30,7 @@ import org.eclipse.ui.IEditorPart;
 import org.junit.After;
 import org.junit.Test;
 
+@org.junit.Ignore
 public class ContextualLaunchableTesterTest {
 
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();

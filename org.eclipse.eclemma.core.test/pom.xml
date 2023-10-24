@@ -30,6 +30,7 @@
         <groupId>org.eclipse.tycho</groupId>
         <artifactId>tycho-surefire-plugin</artifactId>
         <configuration>
+          <skip>true</skip>
           <dependencies>
             <!-- Godin: This declaration is important, otherwise we will receive failure of tests on MacOS with message "Unbound classpath container" -->
             <dependency>

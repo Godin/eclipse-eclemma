@@ -16,13 +16,27 @@ import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
+import org.eclipse.swtbot.swt.finder.results.VoidResult;
 import org.eclipse.swtbot.eclipse.finder.SWTWorkbenchBot;
+import org.eclipse.swtbot.swt.finder.finders.UIThreadRunnable;
+import org.eclipse.ui.PlatformUI;
 import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 
 public class MenuTest {
 
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
+
+  @Before
+  public void before() {
+    UIThreadRunnable.syncExec(new VoidResult() {
+      public void run() {
+        PlatformUI.getWorkbench().getActiveWorkbenchWindow().getShell()
+            .forceActive();
+      }
+    });
+  }
 
   @After
   public void resetWorkbench() {

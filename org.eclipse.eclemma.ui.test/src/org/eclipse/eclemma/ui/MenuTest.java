@@ -22,6 +22,9 @@ import org.junit.Test;
 
 public class MenuTest {
 
+  @org.junit.Rule
+  public Screenshot screenshot = new Screenshot();
+
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
   @After

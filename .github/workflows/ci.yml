@@ -18,4 +18,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         if: always()
         with:
-          path: org.eclipse.eclemma.ui.test\target\work\data\.metadata\.log
+          retention-days: 2
+          path: |
+            org.eclipse.eclemma.ui.test/target/work/data/.metadata/.log
+            org.eclipse.eclemma.ui.test/target/screenshots

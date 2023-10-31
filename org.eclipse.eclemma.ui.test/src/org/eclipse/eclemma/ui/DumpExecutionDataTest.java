@@ -35,6 +35,9 @@ import org.junit.Test;
 
 public class DumpExecutionDataTest {
 
+  @org.junit.Rule
+  public Screenshot screenshot = new Screenshot();
+
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
   private static ILaunch launch1;

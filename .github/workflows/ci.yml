@@ -15,3 +15,7 @@ jobs:
         shell: bash
         run: |
           mvn -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-11 -DskipUITests=false
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          path: org.eclipse.eclemma.ui.test\target\work\data\.metadata\.log

@@ -61,3 +61,11 @@ jobs:
           Xvfb :99 &
           sleep 5
           mvn -V -B -e verify -Pe${{ matrix.eclipse }} -Dtarget-platform=eclemma-e${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-${{ matrix.java }} -DskipUITests=false
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: ${{ matrix.eclipse }}
+          retention-days: 2
+          path: |
+            org.eclipse.eclemma.ui.test/target/work/data/.metadata/.log
+            org.eclipse.eclemma.ui.test/target/screenshots

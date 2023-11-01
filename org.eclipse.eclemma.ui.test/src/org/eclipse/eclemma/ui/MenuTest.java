@@ -26,9 +26,12 @@ import org.junit.Test;
 
 public class MenuTest {
 
+  @org.junit.Rule
+  public Screenshot screenshot = new Screenshot();
+
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
-  @Before
+  // @Before
   public void before() {
     UIThreadRunnable.syncExec(new VoidResult() {
       public void run() {

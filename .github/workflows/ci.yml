@@ -7,8 +7,11 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu, windows, macos]
-    runs-on: ${{ matrix.os }}-latest
+        os: [macos-11]
+        eclipse:
+          - 4.9     # 2018-09
+          - 4.8
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4.1.1
       - uses: actions/setup-java@387ac29b308b003ca37ba93a6cab5eb57c8f5f93 # v4.0.0
@@ -22,4 +25,12 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          mvn -V -B -e verify -Pe4.12 -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false --no-transfer-progress
+          mvn -V -B -e verify -Pe${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-17 -DskipUITests=false --no-transfer-progress
+      - uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: ${{ matrix.eclipse }}
+          retention-days: 2
+          path: |
+            org.eclipse.eclemma.ui.test/target/work/data/.metadata/.log
+            org.eclipse.eclemma.ui.test/target/screenshots

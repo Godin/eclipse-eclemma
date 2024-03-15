@@ -37,7 +37,20 @@
           <useUIHarness>true</useUIHarness>
           <useUIThread>false</useUIThread>
           <skipTests>${skipUITests}</skipTests>
+  <bundleStartLevel>
+    <bundle>
+      <!-- https://www.eclipse.org/lists/tycho-user/msg09051.html -->
+      <id>org.eclipse.equinox.ds</id>
+      <level>1</level>
+      <autoStart>true</autoStart>
+    </bundle>
+  </bundleStartLevel>
           <dependencies>
+            <dependency>
+              <type>eclipse-plugin</type>
+              <artifactId>org.eclipse.equinox.ds</artifactId>
+              <version>0.0.0</version>
+            </dependency>
             <dependency>
               <!-- workaround for missing dependency in org.eclipse.e4.ui.services: https://bugs.eclipse.org/462862 -->
               <type>eclipse-plugin</type>

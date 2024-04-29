@@ -689,25 +689,71 @@
               <executionEnvironment>${tycho.executionEnvironment}</executionEnvironment>
               <environments>
                 <environment>
-                  <os>win32</os>
-                  <ws>win32</ws>
-                  <arch>x86_64</arch>
-                </environment>
-                <environment>
-                  <os>linux</os>
-                  <ws>gtk</ws>
-                  <arch>x86_64</arch>
-                </environment>
-                <environment>
-                  <os>macosx</os>
-                  <ws>cocoa</ws>
-                  <arch>x86_64</arch>
+                  <os>${build.os}</os>
+                  <ws>${build.ws}</ws>
+                  <arch>${build.arch}</arch>
                 </environment>
               </environments>
             </configuration>
           </plugin>
         </plugins>
       </build>
+    </profile>
+
+    <profile>
+      <id>windows</id>
+      <activation>
+        <os>
+          <family>windows</family>
+        </os>
+      </activation>
+      <properties>
+        <build.os>win32</build.os>
+        <build.ws>win32</build.ws>
+        <build.arch>x86_64</build.arch>
+      </properties>
+    </profile>
+    <profile>
+      <id>linux</id>
+      <activation>
+        <os>
+          <family>unix</family>
+          <!--<name>Linux</name>-->
+        </os>
+      </activation>
+      <properties>
+        <build.os>linux</build.os>
+        <build.ws>gtk</build.ws>
+        <build.arch>x86_64</build.arch>
+      </properties>
+    </profile>
+    <profile>
+      <id>macosx</id>
+      <activation>
+        <os>
+          <family>mac</family>
+          <arch>x86_64</arch>
+        </os>
+      </activation>
+      <properties>
+        <build.os>macosx</build.os>
+        <build.arch>x86_64</build.arch>
+        <build.ws>cocoa</build.ws>
+      </properties>
+    </profile>
+    <profile>
+      <id>macosx-aarch64</id>
+      <activation>
+        <os>
+          <family>mac</family>
+          <arch>aarch64</arch>
+        </os>
+      </activation>
+      <properties>
+        <build.os>macosx</build.os>
+        <build.arch>aarch64</build.arch>
+        <build.ws>cocoa</build.ws>
+      </properties>
     </profile>
 
     <profile>

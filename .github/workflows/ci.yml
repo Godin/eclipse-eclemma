@@ -7,7 +7,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        os: [ubuntu-22.04, windows-2022, macos-13]
+        os: [ubuntu-22.04, windows-2022, macos-12]
         eclipse:
           - 4.32    # 2024-06
           - 4.31    # 2024-03

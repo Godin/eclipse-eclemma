@@ -15,6 +15,10 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+      - name: Investigations
+        shell: bash
+        run: |
+          ls C:/Users/runneradmin/.m2/
       - name: Build
         shell: bash
         run: |

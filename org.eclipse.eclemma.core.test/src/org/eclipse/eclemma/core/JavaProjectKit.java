@@ -81,8 +81,8 @@ public class JavaProjectKit {
   }
 
   public void enableJava5() {
-    javaProject.setOption(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_5);
-    javaProject.setOption(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_5);
+    javaProject.setOption(JavaCore.COMPILER_COMPLIANCE, JavaCore.VERSION_1_8);
+    javaProject.setOption(JavaCore.COMPILER_SOURCE, JavaCore.VERSION_1_8);
   }
 
   public IFolder setDefaultOutputLocation(String foldername)

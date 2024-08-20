@@ -32,6 +32,7 @@ import org.jacoco.core.analysis.IBundleCoverage;
 import org.jacoco.core.analysis.IClassCoverage;
 import org.jacoco.core.analysis.IPackageCoverage;
 import org.jacoco.core.analysis.ISourceFileCoverage;
+import org.jacoco.core.analysis.CoverageBuilder;
 import org.jacoco.core.data.ExecutionData;
 import org.jacoco.core.data.ExecutionDataStore;
 import org.jacoco.core.data.SessionInfo;
@@ -100,8 +101,14 @@ public class SessionAnalyzer {
     final TypeVisitor visitor = new TypeVisitor(analyzer.analyze(root));
     new TypeTraverser(root).process(visitor, monitor);
 
-    final IBundleCoverage bundle = new BundleCoverageImpl(getName(root),
-        visitor.getClasses(), visitor.getSources());
+    // FIXME
+    final CoverageBuilder b = new CoverageBuilder();
+    for (IClassCoverage classCoverage : visitor.getClasses()) {
+      b.visitCoverage(classCoverage);
+    }
+    // final IBundleCoverage bundle = new BundleCoverageImpl(getName(root),
+    // visitor.getClasses(), visitor.getSources());
+    final IBundleCoverage bundle = b.getBundle(getName(root));
     modelcoverage.putFragmentRoot(root, bundle);
     putPackages(bundle.getPackages(), root);
   }

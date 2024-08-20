@@ -237,6 +237,7 @@
         </property>
       </activation>
       <properties>
+        <!-- juno -->
         <target-platform>eclemma-e3.8</target-platform>
         <tycho.executionEnvironment>JavaSE-1.6</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/juno/</platform-repository-url>
@@ -251,6 +252,7 @@
         </property>
       </activation>
       <properties>
+        <!-- kepler -->
         <target-platform>eclemma-e4.3</target-platform>
         <tycho.executionEnvironment>JavaSE-1.6</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/kepler/</platform-repository-url>
@@ -265,6 +267,7 @@
         </property>
       </activation>
       <properties>
+        <!-- luna -->
         <target-platform>eclemma-e4.4</target-platform>
         <tycho.executionEnvironment>JavaSE-1.7</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/luna/</platform-repository-url>
@@ -279,6 +282,7 @@
         </property>
       </activation>
       <properties>
+        <!-- mars -->
         <target-platform>eclemma-e4.5</target-platform>
         <tycho.executionEnvironment>JavaSE-1.7</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/mars/</platform-repository-url>
@@ -293,6 +297,7 @@
         </property>
       </activation>
       <properties>
+        <!-- neon -->
         <target-platform>eclemma-e4.6</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/neon/</platform-repository-url>
@@ -307,6 +312,7 @@
         </property>
       </activation>
       <properties>
+        <!-- oxygen -->
         <target-platform>eclemma-e4.7</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>http://download.eclipse.org/releases/oxygen/</platform-repository-url>
@@ -321,6 +327,7 @@
         </property>
       </activation>
       <properties>
+        <!-- photon -->
         <target-platform>eclemma-e4.8</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/photon/</platform-repository-url>
@@ -335,7 +342,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.9</target-platform>
+        <target-platform>2018-09</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2018-09/</platform-repository-url>
       </properties>
@@ -349,7 +356,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.10</target-platform>
+        <target-platform>2018-12</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2018-12/</platform-repository-url>
       </properties>
@@ -363,7 +370,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.11</target-platform>
+        <target-platform>2019-03</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2019-03/</platform-repository-url>
       </properties>
@@ -377,7 +384,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.12</target-platform>
+        <target-platform>2019-06</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2019-06/</platform-repository-url>
       </properties>
@@ -391,7 +398,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.13</target-platform>
+        <target-platform>2019-09</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2019-09/</platform-repository-url>
       </properties>
@@ -405,7 +412,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.14</target-platform>
+        <target-platform>2019-12</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2019-12/</platform-repository-url>
       </properties>
@@ -419,7 +426,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.15</target-platform>
+        <target-platform>2020-03</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2020-03/</platform-repository-url>
       </properties>
@@ -433,7 +440,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.16</target-platform>
+        <target-platform>2020-06</target-platform>
         <tycho.executionEnvironment>JavaSE-1.8</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2020-06/</platform-repository-url>
       </properties>
@@ -447,7 +454,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.17</target-platform>
+        <target-platform>2020-09</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2020-09/</platform-repository-url>
       </properties>
@@ -461,7 +468,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.18</target-platform>
+        <target-platform>2020-12</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2020-12/</platform-repository-url>
       </properties>
@@ -475,7 +482,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.19</target-platform>
+        <target-platform>2021-03</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2021-03/</platform-repository-url>
       </properties>
@@ -489,7 +496,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.20</target-platform>
+        <target-platform>2021-06</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2021-06/</platform-repository-url>
       </properties>
@@ -503,7 +510,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.21</target-platform>
+        <target-platform>2021-09</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2021-09/</platform-repository-url>
       </properties>
@@ -517,7 +524,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.22</target-platform>
+        <target-platform>2021-12</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2021-12/</platform-repository-url>
       </properties>
@@ -531,7 +538,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.23</target-platform>
+        <target-platform>2022-03</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2022-03/</platform-repository-url>
       </properties>
@@ -545,7 +552,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.24</target-platform>
+        <target-platform>2022-06</target-platform>
         <tycho.executionEnvironment>JavaSE-11</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2022-06/</platform-repository-url>
       </properties>
@@ -559,7 +566,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.25</target-platform>
+        <target-platform>2022-09</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2022-09/</platform-repository-url>
       </properties>
@@ -573,7 +580,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.26</target-platform>
+        <target-platform>2022-12</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2022-12/</platform-repository-url>
       </properties>
@@ -587,7 +594,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.27</target-platform>
+        <target-platform>2023-03</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2023-03/</platform-repository-url>
       </properties>
@@ -601,7 +608,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.28</target-platform>
+        <target-platform>2023-06</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2023-06/</platform-repository-url>
       </properties>
@@ -615,7 +622,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.29</target-platform>
+        <target-platform>2023-09</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2023-09/</platform-repository-url>
       </properties>
@@ -629,7 +636,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.30</target-platform>
+        <target-platform>2023-12</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2023-12/</platform-repository-url>
       </properties>
@@ -643,7 +650,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.31</target-platform>
+        <target-platform>2024-03</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2024-03/</platform-repository-url>
       </properties>
@@ -657,7 +664,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.32</target-platform>
+        <target-platform>2024-06</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2024-06/</platform-repository-url>
       </properties>
@@ -671,7 +678,7 @@
         </property>
       </activation>
       <properties>
-        <target-platform>eclemma-e4.33</target-platform>
+        <target-platform>2024-09</target-platform>
         <tycho.executionEnvironment>JavaSE-17</tycho.executionEnvironment>
         <platform-repository-url>https://download.eclipse.org/releases/2024-09/</platform-repository-url>
       </properties>

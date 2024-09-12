@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Configuration
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    label="EclEmma Development Environment">
+  <annotation
+      source="http://www.eclipse.org/oomph/setup/BrandingInfo">
+    <detail
+        key="imageURI">
+      <value>https://www.eclipse.org/downloads/images/committers.png</value>
+    </detail>
+  </annotation>
+  <installation
+      name="eclemma.development.environment.installation"
+      label="EclEmma Development Environment Installation">
+    <annotation
+        source="Documentation">
+      <detail
+          key="info">
+        <value>TODO describe choice of version - https://eclipse.dev/eclipse/news/4.33/jdt.php#removed-support-for-java7-and-below</value>
+      </detail>
+    </annotation>
+    <productVersion
+        href="index:/org.eclipse.setup#//@productCatalogs[name='org.eclipse.products']/@products[name='epp.package.committers']/@versions[name='2024-06']"/>
+    <description>The EclEmma Development Environment installation provides cool stuff.</description>
+  </installation>
+  <workspace
+      name="eclemma.development.environment.workspace"
+      label="EclEmma Development Environment Workspace">
+    <stream
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='eclemma']/@streams[name='master']"/>
+    <description>The EclEmma Development Environment workspace provides cool stuff.</description>
+  </workspace>
+  <description>The EclEmma Development Environment configuration provides cool stuff.</description>
+</setup:Configuration>

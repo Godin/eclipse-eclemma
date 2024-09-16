@@ -215,6 +215,11 @@
               <version>4.29</version>
               <file>../org.eclipse.eclemma.core/.settings/org.eclipse.jdt.core.prefs</file>
             </eclipse>
+            <importOrder>
+              <!-- TODO -->
+              <order>java,javax,org,com,org.eclipse.eclemma,</order>
+              <semanticSort>true</semanticSort>
+            </importOrder>
             <lineEndings>UNIX</lineEndings>
             <trimTrailingWhitespace/>
             <endWithNewline/>

@@ -764,7 +764,13 @@
               </target>
               <ignoreTychoRepositories>true</ignoreTychoRepositories>
               <executionEnvironment>${tycho.executionEnvironment}</executionEnvironment>
+              <!--
+                  macosx aarch64 starting from 4.20 (2021-06)
+                  https://www.eclipse.org/forums/index.php/t/1108283/
+                  ?
+              -->
               <environments>
+                <!--
                 <environment>
                   <os>win32</os>
                   <ws>win32</ws>
@@ -779,6 +785,12 @@
                   <os>macosx</os>
                   <ws>cocoa</ws>
                   <arch>x86_64</arch>
+                </environment>
+                -->
+                <environment>
+                  <os>macosx</os>
+                  <ws>cocoa</ws>
+                  <arch>aarch64</arch>
                 </environment>
               </environments>
             </configuration>

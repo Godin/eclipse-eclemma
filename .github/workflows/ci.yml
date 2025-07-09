@@ -9,6 +9,9 @@ jobs:
       matrix:
         include:
           - os: ubuntu-22.04
+            eclipse: 4.36
+            java: 21
+          - os: ubuntu-22.04
             eclipse: 4.12
             java: 17
           - os: windows-2022

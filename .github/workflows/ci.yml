@@ -22,4 +22,4 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          ./mvnw -V -B -e verify -Pe4.36 -Dtycho.executionEnvironment=JavaSE-21 -DskipUITests=false --no-transfer-progress
+          ./mvnw -V -B -e verify -Pe4.37 -Dtycho.executionEnvironment=JavaSE-21 -DskipUITests=false --no-transfer-progress

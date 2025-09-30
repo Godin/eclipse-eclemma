@@ -19,6 +19,9 @@ import org.junit.Test;
 
 public class ExportImportTest {
 
+  @org.junit.Rule
+  public Screenshot screenshot = new Screenshot();
+
   private static final SWTWorkbenchBot bot = new SWTWorkbenchBot();
 
   @After

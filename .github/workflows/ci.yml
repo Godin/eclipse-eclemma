@@ -22,7 +22,7 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          ./mvnw -V -B -e verify -Pe4.35 -Dtycho.executionEnvironment=JavaSE-21 -DskipUITests=false --no-transfer-progress
+          ./mvnw -V -B -e verify -Pe4.34 -Dtycho.executionEnvironment=JavaSE-21 -DskipUITests=false --no-transfer-progress
       - uses: actions/upload-artifact@v4
         if: always()
         with:

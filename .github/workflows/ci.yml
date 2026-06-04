@@ -9,7 +9,7 @@ jobs:
       matrix:
         include:
           - os: ubuntu-22.04
-            eclipse: 4.41
+            eclipse: '4.40'
             java: 21
           - os: ubuntu-22.04
             eclipse: 4.12

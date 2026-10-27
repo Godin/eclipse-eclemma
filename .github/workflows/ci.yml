@@ -9,6 +9,9 @@ jobs:
       matrix:
         include:
           - os: ubuntu-22.04
+            eclipse: 4.42
+            java: 25
+          - os: ubuntu-22.04
             eclipse: 4.12
             java: 17
           - os: windows-2022
@@ -36,4 +39,5 @@ jobs:
             export DISPLAY=:99.0
             Xvfb $DISPLAY &
           fi
-          ./mvnw -V -B -e verify -Pe${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-${{ matrix.java }} -DskipUITests=false --no-transfer-progress
+          # https://github.com/eclipse-tycho/tycho/issues/4526
+          ./mvnw -V -B -e verify -Pe${{ matrix.eclipse }} -Dtycho.executionEnvironment=JavaSE-${{ matrix.java }} -DskipUITests=false --no-transfer-progress -Djdk.xml.totalEntitySizeLimit=1000000 -Djdk.xml.maxGeneralEntitySizeLimit=1000000
